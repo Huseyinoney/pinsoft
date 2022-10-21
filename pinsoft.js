@@ -35,10 +35,22 @@ function Minesweeper(square) {
     return square
 }
 let square = [["*","0","0","0"],["0","0","0","0"],["0","*","0","0"],["0","0","0","0"]]
- let a = Minesweeper(square)
 
- function show() {
+let square1 = [["*","*","0","0","0"],["0","0","0","0","0"],["0","*","0","0","0"]]
+
+let square3 = [["*","0","*","0","0"],["*","*","0","0","0"],["0","0","0","0","0"],["0","*","0","0","0"],["0","*","0","0","0"]]
+ //let a = Minesweeper(square)
+
+ function show(square) {
+    let a = Minesweeper(square)
  for(let i =0; i<square.length;i++){
     console.log(a[i])
 }}
-show()
+show(square)//test 1
+
+console.log("")
+
+show(square1)// test 2
+console.log("")
+
+show(square3) //test 3
