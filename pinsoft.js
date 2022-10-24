@@ -1,5 +1,6 @@
 
 function Minesweeper(square) {
+    update(square)
  
     for (let i=0 ; i<square.length; i++) {
         for(let j =0; j<square[0].length; j++) {
@@ -34,7 +35,7 @@ function Minesweeper(square) {
     }
     return square
 }
-let square = [["*","0","0","0"],["0","0","0","0"],["0","*","0","0"],["0","0","0","0"]]
+let square = [["*",".",".","."],[".",".",".","."],[".","*",".","."],[".",".",".","."]]
 
 let square1 = [["*","*","0","0","0"],["0","0","0","0","0"],["0","*","0","0","0"]]
 
@@ -54,3 +55,18 @@ show(square1)// test 2
 console.log("")
 
 show(square3) //test 3
+
+//"." ile verilen boş alanları işlem kolaylığı için sıfıra çevirir.
+function update(square) {
+    for(let a=0; a<square.length;a++){
+        for(let b =0; b<square[0].length; b++) {
+            if(square[a][b]==="."){
+                square[a][b]="0"
+            }
+            else {
+                continue
+            }
+        }
+    }
+    return square
+}
