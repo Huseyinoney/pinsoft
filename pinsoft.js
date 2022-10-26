@@ -54,7 +54,7 @@ console.log("")
 show(square1)// test 2
 console.log("")
 
-show(square3) //test 3
+show(square3) //test 3*/
 
 //"." ile verilen boş alanları işlem kolaylığı için sıfıra çevirir.
 function update(square) {
@@ -69,4 +69,10 @@ function update(square) {
         }
     }
     return square
+}
+
+
+module.exports = {
+    Minesweeper,
+   update
 }
